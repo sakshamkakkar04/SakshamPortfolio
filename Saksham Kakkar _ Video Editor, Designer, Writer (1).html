@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#101319">
+<meta name="description" content="Saksham Kakkar: writer, video editor and graphic designer. YouTube edits, gaming videos, podcasts, reels, thumbnails and design.">
+<title>Saksham Kakkar | Video Editor, Designer, Writer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,700&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{--bg:#101319;--panel:#171b23;--text:#eceff4;--muted:#98a1b3;--blue:#7aa2ff;--amber:#f2c879;--rose:#f09aa8;--mint:#8fd9c0;--line:#272d39;color-scheme:dark}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:84px;height:100%}
+body{margin:0;background:var(--bg);color:var(--text);font:400 1rem/1.7 'Figtree',system-ui,sans-serif;overflow-x:hidden;padding:env(safe-area-inset-top,0) 0 env(safe-area-inset-bottom,0)}
+a{color:inherit;text-decoration:none}
+:focus-visible{outline:2px solid var(--blue);outline-offset:3px;border-radius:6px}
+::selection{background:var(--blue);color:#0b0e14}
+.wrap{width:min(1120px,calc(100% - 40px));margin:auto}
+h1,h2,h3{font-family:'Bricolage Grotesque',sans-serif;margin:0;font-weight:500;letter-spacing:-.03em;line-height:1.05}
+nav{position:sticky;top:0;z-index:10;background:#101319e6;backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+nav .wrap{height:72px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.logo{font-family:'Bricolage Grotesque',sans-serif;font-weight:700;font-size:1.25rem;letter-spacing:-.03em;white-space:nowrap}
+.links{display:flex;gap:28px;color:var(--muted);font-size:.92rem}
+.links a:hover{color:var(--text)}
+.pill{border:1px solid #3a4252;border-radius:99px;padding:9px 18px;font-size:.88rem;font-weight:500;transition:.2s}
+.pill:hover{background:var(--text);color:#0b0e14;border-color:var(--text)}
+.hero{padding:96px 0 72px}
+.status{display:inline-flex;align-items:center;gap:10px;color:var(--muted);font-size:.9rem}
+.status:before{content:'';width:8px;height:8px;border-radius:50%;background:var(--mint)}
+h1{font-size:clamp(2.8rem,7.4vw,6.2rem);max-width:12ch;margin:22px 0 26px;font-weight:700;letter-spacing:-.045em;line-height:.98}
+.lede{max-width:540px;color:var(--muted);font-size:1.1rem}
+.actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:32px}
+.btn{padding:14px 24px;border-radius:99px;font-weight:600;font-size:.95rem;transition:transform .2s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.main{background:var(--text);color:#0b0e14}
+.btn.ghost{border:1px solid #3a4252}
+.btn.ghost:hover{border-color:var(--blue)}
+.tl{position:relative;margin-top:72px;border:1px solid var(--line);border-radius:14px;background:var(--panel);padding:14px 14px 16px;overflow:hidden}
+.tl-top{display:flex;justify-content:space-between;color:var(--muted);font-size:.78rem;margin-bottom:10px}
+.ruler{height:14px;margin-bottom:8px;background:repeating-linear-gradient(90deg,#3a4252 0 1px,transparent 1px 48px) 0 100%/100% 8px no-repeat}
+.track{display:flex;gap:4px;height:46px;margin-bottom:6px}
+.track i{border-radius:6px;display:flex;align-items:center;padding:0 12px;font-style:normal;font-size:.75rem;font-weight:600;color:#0b0e14;white-space:nowrap;overflow:hidden;flex:var(--w) 1 0}
+.track.gap i.sp{background:none;flex-grow:var(--w)}
+.wave{align-items:center;gap:3px;height:38px;background:#12161d;border-radius:6px;padding:0 6px}
+.wave span{flex:1;min-width:2px;background:var(--blue);opacity:.75;border-radius:2px}
+.head{position:absolute;top:0;bottom:0;width:2px;background:var(--rose);left:4%;animation:scrub 16s linear infinite alternate}
+.head:before{content:'';position:absolute;top:0;left:-6px;border:7px solid transparent;border-top-color:var(--rose);border-bottom:0}
+@keyframes scrub{to{left:96%}}
+section{padding:92px 0}
+.sec-head{display:flex;justify-content:space-between;align-items:end;gap:28px;margin-bottom:36px;flex-wrap:wrap}
+.sec-head h2{font-size:clamp(2rem,4.6vw,3.6rem);max-width:15ch}
+.sec-head p{max-width:380px;color:var(--muted);margin:0}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.filter{background:none;color:var(--muted);border:1px solid var(--line);border-radius:99px;padding:8px 16px;cursor:pointer;font:500 .88rem 'Figtree',sans-serif;transition:.2s}
+.filter:hover{color:var(--text);border-color:#3a4252}
+.filter[aria-pressed=true]{background:var(--text);color:#0b0e14;border-color:var(--text)}
+.projects{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+.project{background:var(--panel);border:1px solid var(--line);border-radius:16px;overflow:hidden}
+.project[hidden]{display:none}
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:72px;align-items:start}
+.statement{font-family:'Bricolage Grotesque',sans-serif;font-size:clamp(2.4rem,5vw,4rem);font-weight:700;line-height:1;letter-spacing:-.045em;position:sticky;top:110px}
+.about p{color:var(--muted);margin:0 0 18px;max-width:62ch}
+.about h2{font-size:clamp(1.7rem,3vw,2.3rem);margin-bottom:20px}
+.skills{display:flex;gap:8px;flex-wrap:wrap;margin-top:28px}
+.skills span{border:1px solid var(--line);border-radius:99px;padding:7px 14px;font-size:.86rem;color:#c9cfdb}
+.list{border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:1fr 1.3fr;gap:32px;padding:30px 0;border-bottom:1px solid var(--line);transition:padding .25s}
+.row:hover{padding-left:12px}
+.row h3{font-size:1.5rem}
+.row p{margin:0;color:var(--muted)}
+.contact{border:1px solid var(--line);border-radius:22px;padding:clamp(28px,6vw,68px);background:var(--panel);display:flex;justify-content:space-between;align-items:end;gap:36px;flex-wrap:wrap}
+.contact h2{font-size:clamp(2.4rem,6vw,5rem);font-weight:700;letter-spacing:-.045em;line-height:.98;margin-bottom:18px}
+.contact p{color:var(--muted);max-width:440px;margin:0}
+.ctas{display:flex;flex-direction:column;gap:10px;min-width:min(300px,100%);overflow-wrap:anywhere}.ctas a{gap:14px}.ic{display:flex;align-items:center;gap:12px}.ic svg{width:20px;height:20px;flex:none;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.ctas a{display:flex;justify-content:space-between;border:1px solid #3a4252;border-radius:12px;padding:14px 18px;font-weight:500;transition:.2s}
+.ctas a:hover{background:var(--text);color:#0b0e14;border-color:var(--text)}
+footer{padding:28px 0 44px;color:var(--muted);font-size:.86rem}
+footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:24px}
+@media(max-width:820px){.about{grid-template-columns:1fr;gap:28px}.statement{position:static}.row{grid-template-columns:1fr;gap:8px}}
+@media(max-width:600px){.projects{grid-template-columns:1fr}.links{gap:16px;font-size:.85rem}nav .pill{display:none}.hero{padding-top:60px}section{padding:68px 0}.track{height:38px}.ctas{width:100%}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+:root{--h:222;--acc:hsl(var(--h) 100% 74%)}
+::selection{background:var(--acc)}
+html.fine,html.fine a,html.fine button{cursor:none}
+.cur,.ring{position:fixed;left:0;top:0;pointer-events:none;z-index:100;border-radius:50%;display:none}
+html.fine .cur,html.fine .ring{display:block}
+.cur{width:8px;height:8px;margin:-4px 0 0 -4px;background:var(--acc)}
+.ring{width:38px;height:38px;margin:-19px 0 0 -19px;border:1.5px solid var(--acc);transition:width .25s,height .25s,margin .25s,background .25s}
+.ring.big{width:72px;height:72px;margin:-36px 0 0 -36px;background:color-mix(in srgb,var(--acc) 18%,transparent)}
+.ring.down{width:24px;height:24px;margin:-12px 0 0 -12px}
+.bar{position:fixed;top:0;left:0;height:3px;width:0;background:var(--acc);z-index:50}
+.aura{position:fixed;inset:0;z-index:-1;pointer-events:none;background:radial-gradient(560px circle at var(--mx,70%) var(--my,25%),hsl(var(--ah,222) 90% 60%/.17),transparent 62%)}
+.sp{position:fixed;width:6px;height:6px;margin:-3px 0 0 -3px;border-radius:50%;pointer-events:none;z-index:90;background:var(--acc);box-shadow:0 0 10px var(--acc);animation:sp .8s ease-out forwards}
+@keyframes sp{to{opacity:0;transform:translate(var(--dx),var(--dy)) scale(0)}}
+.sw{position:fixed;right:16px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:60;display:flex;gap:8px;padding:8px 10px;background:#171b23e6;border:1px solid var(--line);border-radius:99px;backdrop-filter:blur(8px)}
+.sw button{width:20px;height:20px;border-radius:50%;border:2px solid transparent;background:hsl(var(--s) 100% 72%);padding:0;cursor:pointer;transition:transform .2s}
+.sw button:hover{transform:scale(1.25)}
+.sw button[aria-pressed=true]{border-color:#fff}
+.w{display:inline-block;transition:transform .3s,color .3s}
+.w:hover{color:var(--acc);transform:translateY(-8px) rotate(-3deg)}
+.rot{margin:0 0 14px;color:var(--muted);font-size:1.15rem}
+.rot b{color:var(--acc);font-weight:600}
+.rot i{display:inline-block;width:2px;height:1.05em;background:var(--acc);vertical-align:-3px;margin-left:3px;animation:bl 1s steps(1) infinite}
+@keyframes bl{50%{opacity:0}}
+.tl{touch-action:pan-y;cursor:ew-resize;user-select:none}
+.track:not(.wave) i{transition:flex-grow .4s,filter .2s}
+.track:not(.wave) i:hover{flex-grow:calc(var(--w)*1.5);filter:brightness(1.15)}
+.head{background:var(--acc)}.head:before{border-top-color:var(--acc)}
+.btn.main:hover{background:var(--acc)}
+.filter[aria-pressed=true]{background:var(--acc);border-color:var(--acc)}
+.row:hover h3{color:var(--acc)}
+.project{position:relative;transition:transform .15s,border-color .3s;will-change:transform}
+.project:hover{border-color:var(--c)}
+.project:before{content:'';position:absolute;inset:0;z-index:1;pointer-events:none;opacity:0;transition:opacity .3s;background:radial-gradient(340px circle at var(--px,50%) var(--py,50%),color-mix(in srgb,var(--c) 30%,transparent),transparent 70%)}
+.project:hover:before{opacity:1}
+.js .rv{opacity:0;transform:translateY(28px);transition:opacity .7s,transform .7s}
+.js .rv.in{opacity:1;transform:none}
+.blob{position:fixed;z-index:-1;width:46vw;height:46vw;max-width:640px;max-height:640px;border-radius:50%;filter:blur(90px);pointer-events:none;animation:drift 24s ease-in-out infinite alternate}
+.b1{top:-12%;left:-10%;background:hsl(var(--h) 90% 60%/.2)}
+.b2{top:35%;right:-14%;background:hsl(calc(var(--h) + 70) 90% 62%/.14);animation-duration:30s}
+.b3{bottom:-18%;left:25%;background:hsl(calc(var(--h) - 70) 90% 60%/.14);animation-duration:36s}
+@keyframes drift{to{transform:translate(12vw,10vh) scale(1.25)}}
+#bg{position:fixed;inset:0;z-index:-1;pointer-events:none}
+body:after{content:'';position:fixed;inset:0;z-index:40;pointer-events:none;opacity:.07;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");animation:gr .9s steps(1) infinite}
+@keyframes gr{25%{background-position:-30px 20px}50%{background-position:20px -40px}75%{background-position:-10px -10px}}
+.tile{position:relative;display:flex;flex-direction:column;min-height:310px;padding:22px 24px;overflow:hidden;color:inherit;background:linear-gradient(145deg,color-mix(in srgb,var(--c) 24%,#141922),#11151d 72%)}
+.tile:before{content:'';position:absolute;right:-70px;bottom:-90px;width:230px;height:230px;border-radius:50%;border:1px solid color-mix(in srgb,var(--c) 24%,transparent);box-shadow:0 0 0 34px color-mix(in srgb,var(--c) 5%,transparent)}
+.tile>*{position:relative;z-index:1}
+.top{display:flex;align-items:center;gap:12px;font-size:.88rem;color:var(--muted)}
+.no{display:grid;place-items:center;min-width:34px;height:26px;padding:0 9px;border-radius:99px;border:1px solid color-mix(in srgb,var(--c) 50%,transparent);color:var(--c);font-weight:600;font-size:.8rem}
+.tile h3{margin-top:auto;padding-top:56px;max-width:14ch;font-size:clamp(1.7rem,2.9vw,2.3rem);line-height:1.06;text-wrap:balance}
+.bot{display:flex;align-items:center;justify-content:space-between;gap:14px;margin-top:20px;padding-top:16px;border-top:1px solid #ffffff14}
+.bot p{margin:0;color:var(--muted);font-size:.9rem}
+.go{display:grid;place-items:center;flex:none;width:40px;height:40px;border-radius:50%;border:1px solid color-mix(in srgb,var(--c) 50%,transparent);color:var(--c);transition:transform .3s,background .3s,color .3s}
+.go svg{width:18px;height:18px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.tile .art{position:absolute;top:58px;right:22px;width:40%;max-width:230px;height:auto;color:var(--c);opacity:.45;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;transition:transform .5s,opacity .5s}
+.project:hover .art{opacity:.8;transform:translate(-6px,-4px) rotate(-2deg)}
+.project:hover .go{background:var(--c);color:#10131a;transform:translate(2px,-2px)}
+.tile .cover{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:0}
+.tile:has(.cover) .art,.tile:has(.cover):before{display:none}
+.tile:has(.cover):after{content:'';position:absolute;inset:0;z-index:0;background:linear-gradient(180deg,#10131a80,#10131af0)}
+@media(max-width:600px){.tile{min-height:280px}.tile .art{width:36%;opacity:.28}}
+</style>
+</head>
+<body>
+<div class="blob b1"></div><div class="blob b2"></div><div class="blob b3"></div><div class="bar"></div><div class="aura"></div><canvas id="bg" aria-hidden="true"></canvas><div class="cur"></div><div class="ring"></div>
+<div class="sw" role="group" aria-label="Accent colour"><button data-h="222" style="--s:222" aria-pressed="true" aria-label="Blue"></button><button data-h="155" style="--s:155" aria-pressed="false" aria-label="Green"></button><button data-h="340" style="--s:340" aria-pressed="false" aria-label="Pink"></button><button data-h="42" style="--s:42" aria-pressed="false" aria-label="Amber"></button></div>
+<nav><div class="wrap">
+<a class="logo" href="#home">Saksham Kakkar</a>
+<div class="links"><a href="#work">Work</a><a href="#about">About</a><a href="#services">Services</a></div>
+<a class="pill" href="#contact">Get in touch</a>
+</div></nav>
+<main class="wrap">
+<header class="hero" id="home">
+<div class="status">Open to creative projects</div>
+<h1>Ideas turned into visuals people remember.</h1>
+<p class="rot">I <b id="rot">edit videos</b><i></i></p>
+<p class="lede">I'm a Biotechnology student who edits video and designs for creators. From long-form YouTube to reels, thumbnails and Instagram posts, I make content that feels sharp and finished.</p>
+<div class="actions"><a class="btn main" href="#work">See my work</a><a class="btn ghost" href="#contact">Start a project</a></div>
+<div class="tl" role="img" aria-label="Video timeline you can drag to scrub">
+<div class="tl-top"><span>Sequence 01 · drag to scrub</span><span id="tc">00:00:12:08</span></div>
+<div class="ruler"></div>
+<div class="track"><i style="--w:22;background:var(--blue)">Intro</i><i style="--w:34;background:var(--amber)">Main story</i><i style="--w:16;background:var(--mint)">B-roll</i><i style="--w:28;background:var(--rose)">Outro</i></div>
+<div class="track wave" id="wave"></div>
+<div class="head"></div>
+</div>
+</header>
+
+<section id="work">
+<div class="sec-head"><h2>Selected work</h2><p>YouTube edits, thumbnails, brand graphics and podcast projects.</p></div>
+<div class="filters" role="group" aria-label="Filter work">
+<button class="filter" data-filter="all" aria-pressed="true">All</button>
+<button class="filter" data-filter="video" aria-pressed="false">Video editing</button>
+<button class="filter" data-filter="design" aria-pressed="false">Graphic design</button>
+</div>
+<div class="projects">
+<!-- To add real work: put <img class="cover" src="..." alt="..."> as the first thing inside a .tile, and change <div class="tile"> to <a class="tile" href="LINK" target="_blank" rel="noreferrer"> (and </div> to </a>). -->
+<article class="project" data-category="video" style="--c:var(--blue)">
+<div class="tile">
+<svg class="art" viewBox="0 0 160 120" aria-hidden="true"><rect x="6" y="12" width="148" height="96" rx="8"/><path d="M6 30h148M6 90h148"/><path d="M14 21h132M14 99h132" stroke-width="4" stroke-dasharray=".1 15.6"/><path d="M68 47l28 13-28 13z"/></svg>
+<div class="top"><span class="no">01</span><span>Video editing</span></div>
+<h3>Stories, cut with purpose.</h3>
+<div class="bot"><p>Pacing · Sound design · Color</p><span class="go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></svg></span></div>
+</div>
+</article>
+<article class="project" data-category="design" style="--c:var(--rose)">
+<div class="tile">
+<svg class="art" viewBox="0 0 160 120" aria-hidden="true"><rect x="14" y="14" width="132" height="92" rx="8"/><path d="M14 90l34-32 26 24 20-16 52 38"/><circle cx="112" cy="40" r="9"/><path d="M4 24V4h20M156 96v20h-20"/></svg>
+<div class="top"><span class="no">02</span><span>Thumbnail design</span></div>
+<h3>Made to earn the click.</h3>
+<div class="bot"><p>Composition · Retouching · Impact</p><span class="go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></svg></span></div>
+</div>
+</article>
+<article class="project" data-category="design" style="--c:var(--amber)">
+<div class="tile">
+<svg class="art" viewBox="0 0 160 120" aria-hidden="true"><rect x="14" y="14" width="132" height="92" rx="8"/><path d="M60 14v92M24 90l14-44 14 44M29 76h18M74 34h54M74 48h38M74 62h46M74 90h30"/></svg>
+<div class="top"><span class="no">03</span><span>Graphic design</span></div>
+<h3>Visuals with a point of view.</h3>
+<div class="bot"><p>Visual identity · Layout · Typography</p><span class="go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></svg></span></div>
+</div>
+</article>
+<article class="project" data-category="video" style="--c:var(--mint)">
+<div class="tile">
+<svg class="art" viewBox="0 0 160 120" aria-hidden="true" stroke-width="5"><path d="M14 52v16M26 40v40M38 24v72M50 44v32M62 14v92M74 34v52M86 48v24M98 28v64M110 40v40M122 20v80M134 46v28M146 54v12"/></svg>
+<div class="top"><span class="no">04</span><span>Podcast editing</span></div>
+<h3>Every word, heard clearly.</h3>
+<div class="bot"><p>Story flow · Clean audio · Polish</p><span class="go" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M7 17L17 7M8 7h9v9"/></svg></span></div>
+</div>
+</article>
+</div>
+</section>
+
+<section id="about">
+<div class="about">
+<div class="statement">Make it matter.</div>
+<div>
+<h2>More than cuts and keyframes.</h2>
+<p>I'm Saksham Kakkar, a Biotechnology student who loves video editing, visual storytelling and the creative industry. Alongside my studies, I turn ideas into content that feels engaging, polished and true to its purpose. My experience includes Spotify podcast projects and video editing.</p>
+<p>I'm also a certified graphic designer. I create thumbnails, Instagram posts, promotional ads, AI-assisted content and book covers. Whether you need a long-form video, a reel or visuals for social media, I can help bring your idea to life. I care about the details and keep learning new techniques so every project feels complete.</p>
+<div class="skills"><span>Writing</span><span>Video editing</span><span>Gaming videos</span><span>Reels and shorts</span><span>Sound design</span><span>Thumbnail design</span><span>Graphic design</span><span>Podcast editing</span><span>AI-assisted content</span><span>Book covers</span><span>Instagram content</span><span>Promotional ads</span></div>
+</div>
+</div>
+</section>
+
+<section id="services">
+<div class="sec-head"><h2>What I can do for you</h2><p>Flexible creative support for creators, channels and brands that want polished content and consistent visuals.</p></div>
+<div class="list">
+<div class="row"><h3>Video editing</h3><p>YouTube long-form videos, shorts and reels, with pacing, transitions, sound design and a final polish.</p></div>
+<div class="row"><h3>Thumbnail design</h3><p>Thumbnails with strong composition, a clear subject and a visual hierarchy that earns the click.</p></div>
+<div class="row"><h3>Graphic design</h3><p>Instagram posts, promotional ads, AI-assisted content, book covers, posters and logos built around your idea.</p></div>
+<div class="row"><h3>Writing and content</h3><p>Scripts, captions and creative writing that communicate your ideas clearly.</p></div>
+<div class="row"><h3>Podcast projects</h3><p>Spotify podcast support, audio-visual packaging and edits for podcast creators.</p></div>
+</div>
+</section>
+
+<section id="contact">
+<div class="contact">
+<div>
+<h2>Let's make something good.</h2>
+<p>Have a video to edit, a thumbnail to design or an idea to bring to life? Tell me what you're working on.</p>
+</div>
+<div class="ctas">
+<a id="emailLink" href="mailto:sakshamkakkar04@gmail.com"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg>sakshamkakkar04@gmail.com</span> <span aria-hidden="true">↗</span></a>
+<a id="instagramLink" href="https://www.instagram.com/_sakshamkakkar/" target="_blank" rel="noreferrer"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".6"/></svg>@_sakshamkakkar</span> <span aria-hidden="true">↗</span></a>
+<a href="https://wa.me/916388404012" target="_blank" rel="noreferrer"><span class="ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 21l1.65-4.9A9 9 0 1 1 8 19.4z"/><path d="M9 8.5c0 3.5 3 6.5 6.5 6.5l1.2-1.6-2.2-1.2-.9.8c-1-.4-2-1.4-2.4-2.4l.8-.9L10.8 7.3z"/></svg>+91 63884 04012</span> <span aria-hidden="true">↗</span></a>
+<a href="#work">View my work <span aria-hidden="true">↑</span></a>
+</div>
+</div>
+</section>
+</main>
+<footer><div class="wrap"><div>© <span id="year"></span> Saksham Kakkar</div><div>Writing, video editing and graphic design</div><a href="#home">Back to top</a></div></footer>
+<script>
+const CONTACT={email:"sakshamkakkar04@gmail.com",instagram:"https://www.instagram.com/_sakshamkakkar/",youtube:"https://youtube.com/"};
+document.getElementById('emailLink').href='mailto:'+CONTACT.email;
+document.getElementById('instagramLink').href=CONTACT.instagram;
+document.getElementById('year').textContent=new Date().getFullYear();
+const wave=document.getElementById('wave');
+for(let i=0;i<90;i++){const s=document.createElement('span');s.style.height=(18+Math.abs(Math.sin(i*.7)*Math.cos(i*.23))*78)+'%';wave.appendChild(s)}
+const filters=document.querySelectorAll('.filter'),projects=document.querySelectorAll('.project');
+filters.forEach(b=>b.addEventListener('click',()=>{
+filters.forEach(f=>f.setAttribute('aria-pressed',f===b));
+projects.forEach(p=>p.hidden=b.dataset.filter!=='all'&&p.dataset.category!==b.dataset.filter);
+}));
+const root=document.documentElement,fine=matchMedia('(hover:hover) and (pointer:fine)').matches,calm=matchMedia('(prefers-reduced-motion:reduce)').matches;
+root.classList.add('js');
+let hue=222;
+const h1=document.querySelector('h1');
+h1.innerHTML=h1.textContent.split(' ').map(w=>'<span class="w">'+w+'</span>').join(' ');
+document.querySelectorAll('.sec-head,.project,.row,.statement,.about>div:last-child,.contact').forEach(el=>el.classList.add('rv'));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target);setTimeout(()=>e.target.classList.remove('rv','in'),900)}}),{threshold:.1});
+document.querySelectorAll('.rv').forEach(el=>io.observe(el));
+const bar=document.querySelector('.bar');
+addEventListener('scroll',()=>bar.style.width=scrollY/(root.scrollHeight-innerHeight)*100+'%',{passive:true});
+document.querySelectorAll('.sw button').forEach(b=>b.addEventListener('click',()=>{hue=+b.dataset.h;root.style.setProperty('--h',hue);document.querySelectorAll('.sw button').forEach(x=>x.setAttribute('aria-pressed',x===b))}));
+const spark=(px,py,n,d)=>{if(calm)return;for(let i=0;i<n;i++){const s=document.createElement('span'),a=Math.random()*6.28,r=d*(.4+Math.random());s.className='sp';s.style.cssText='left:'+px+'px;top:'+py+'px;--dx:'+Math.cos(a)*r+'px;--dy:'+Math.sin(a)*r+'px';s.onanimationend=()=>s.remove();document.body.appendChild(s)}};
+addEventListener('pointerdown',e=>spark(e.clientX,e.clientY,14,90));
+const tl=document.querySelector('.tl'),head=tl.querySelector('.head'),tc=document.getElementById('tc'),pad=n=>String(n).padStart(2,'0');
+let drag=false;
+const setHead=x=>{const r=tl.getBoundingClientRect();head.style.animation='none';head.style.left=Math.min(.96,Math.max(.04,(x-r.left)/r.width))*100+'%'};
+tl.addEventListener('pointerdown',e=>{drag=true;tl.setPointerCapture(e.pointerId);setHead(e.clientX)});
+tl.addEventListener('pointermove',e=>{if(drag)setHead(e.clientX)});
+tl.addEventListener('pointerup',()=>drag=false);
+(function t(){const s=head.offsetLeft/tl.offsetWidth*60;tc.textContent='00:00:'+pad(Math.floor(s))+':'+pad(Math.floor(s%1*30));requestAnimationFrame(t)})();
+const words=['edit YouTube videos','design thumbnails','cut reels and shorts','edit podcasts','write stories'],out=document.getElementById('rot');
+let wi=0,ci=0,del=false;
+(function type(){const w=words[wi];out.textContent=w.slice(0,ci);if(!del&&ci===w.length){del=true;return setTimeout(type,1400)}if(del&&ci===0){del=false;wi=(wi+1)%words.length}ci+=del?-1:1;setTimeout(type,del?35:70)})();
+const cv=document.getElementById('bg'),g=cv.getContext('2d'),dpr=Math.min(devicePixelRatio||1,2);
+let W,H,mx=-999,my=-999;
+const rs=()=>{W=innerWidth;H=innerHeight;cv.width=W*dpr;cv.height=H*dpr;g.setTransform(dpr,0,0,dpr,0,0)};
+rs();addEventListener('resize',rs);
+addEventListener('pointermove',e=>{mx=e.clientX;my=e.clientY});
+addEventListener('pointerout',e=>{if(!e.relatedTarget){mx=my=-999}});
+const S=Array.from({length:Math.round(Math.min(46,innerWidth/28))},()=>({x:Math.random()*innerWidth,y:Math.random()*innerHeight,z:.35+Math.random()*.65,t:Math.floor(Math.random()*4),r:Math.random()*6.28,vr:(Math.random()-.5)*.006,vx:(Math.random()-.5)*.3,vy:(Math.random()-.5)*.3,o:[0,40,-50,120][Math.floor(Math.random()*4)]}));
+(function bg(){
+g.clearRect(0,0,W,H);
+g.fillStyle='rgba(255,255,255,.08)';const nr=[];
+for(let x=18;x<W;x+=36)for(let y=18;y<H;y+=36){const d=Math.hypot(x-mx,y-my);if(d<220)nr.push([x,y,1-d/220]);else g.fillRect(x-.75,y-.75,1.5,1.5)}
+nr.forEach(([x,y,n])=>{g.fillStyle='hsla('+(hue+n*40)+',100%,75%,'+(.1+n*.6)+')';g.beginPath();g.arc(x,y,1+n*1.8,0,6.28);g.fill()});
+S.forEach(s=>{
+if(!calm){s.x+=s.vx*s.z;s.y+=s.vy*s.z;s.r+=s.vr}
+const L=H+80,py=((s.y-scrollY*.2*s.z)%L+L)%L-40;
+if(s.x<-40)s.x=W+40;if(s.x>W+40)s.x=-40;
+const dx=s.x-mx,dy=py-my,d=Math.hypot(dx,dy);
+if(!calm&&d<170&&d>1){s.x+=dx/d*(170-d)*.035;s.y+=dy/d*(170-d)*.035}
+const sz=22*s.z+6,col=(hue+s.o);
+if(d<170){g.strokeStyle='hsla('+hue+',100%,75%,'+(1-d/170)*.35+')';g.lineWidth=1;g.beginPath();g.moveTo(s.x,py);g.lineTo(mx,my);g.stroke()}
+g.save();g.translate(s.x,py);g.rotate(s.r);g.strokeStyle='hsla('+col+',90%,72%,'+(.16+s.z*.3+(d<170?.3:0))+')';g.lineWidth=1.3;g.beginPath();
+if(s.t===0){g.moveTo(-sz*.5,-sz*.6);g.lineTo(sz*.7,0);g.lineTo(-sz*.5,sz*.6);g.closePath()}
+else if(s.t===1)g.arc(0,0,sz*.6,0,6.28);
+else if(s.t===2){g.moveTo(-sz*.6,0);g.lineTo(sz*.6,0);g.moveTo(0,-sz*.6);g.lineTo(0,sz*.6)}
+else (g.roundRect||g.rect).call(g,-sz*.8,-sz*.55,sz*1.6,sz*1.1,4);
+g.stroke();g.restore()});
+requestAnimationFrame(bg)})();
+if(fine){
+root.classList.add('fine');
+const cur=document.querySelector('.cur'),ring=document.querySelector('.ring'),aura=document.querySelector('.aura');
+let x=innerWidth/2,y=innerHeight/2,rx=x,ry=y,ax=x,ay=y,last=0;
+addEventListener('pointermove',e=>{x=e.clientX;y=e.clientY;cur.style.transform='translate('+x+'px,'+y+'px)';const n=performance.now();if(n-last>45){last=n;spark(x,y,1,26)}});
+(function loop(){rx+=(x-rx)*.18;ry+=(y-ry)*.18;ax+=(x-ax)*.06;ay+=(y-ay)*.06;ring.style.transform='translate('+rx+'px,'+ry+'px)';aura.style.setProperty('--mx',ax+'px');aura.style.setProperty('--my',ay+'px');aura.style.setProperty('--ah',hue+(x/innerWidth-.5)*70);requestAnimationFrame(loop)})();
+addEventListener('pointerover',e=>ring.classList.toggle('big',!!e.target.closest('a,button,.project,.tl')));
+addEventListener('pointerdown',()=>ring.classList.add('down'));
+addEventListener('pointerup',()=>ring.classList.remove('down'));
+document.querySelectorAll('.btn,.pill,.ctas a').forEach(el=>{el.addEventListener('pointermove',e=>{const r=el.getBoundingClientRect();el.style.transform='translate('+(e.clientX-r.left-r.width/2)*.25+'px,'+(e.clientY-r.top-r.height/2)*.35+'px)'});el.addEventListener('pointerleave',()=>el.style.transform='')});
+document.querySelectorAll('.project').forEach(c=>{c.addEventListener('pointermove',e=>{const r=c.getBoundingClientRect(),px=(e.clientX-r.left)/r.width,py=(e.clientY-r.top)/r.height;c.style.setProperty('--px',px*100+'%');c.style.setProperty('--py',py*100+'%');c.style.transform='perspective(800px) rotateX('+(.5-py)*8+'deg) rotateY('+(px-.5)*10+'deg) translateY(-4px)'});c.addEventListener('pointerleave',()=>c.style.transform='')});
+}
+</script>
+</body>
+</html>
